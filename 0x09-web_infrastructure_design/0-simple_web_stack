@@ -1,0 +1,27 @@
+WHAT IS A SERVER?
+	A web server is software and hardware that uses HTTP (Hypertext Transfer Protocol) and other protocols to respond to client requests made over the World 	Wide Web.
+
+WHAT IS THE ROLE OF A DOMAIN NAME?
+	The Domain Name System enables users to access websites without having to know the associated IP address.
+
+WHAT TYPE OF RECORD WWW IS IN WWW.FOOBAR.COM?
+	Canonical Name (CNAME).
+
+WHAT IS THE ROLE OF THE WEB SERVER?
+	A web server connects to the Internet and supports physical data interchange with other devices connected to the web
+	
+WHAT IS THE ROLE OF AN APPLICATION SERVER?
+	The role job of an application server is to provide clients with access to business logic, which is the part of a computer program that encodes the rules for how the program can create, store and manipulate its data.
+
+WHAT IS THE ROLE OF THE DATABASE?
+	The primary role of a database is to store and display updated information in a web application
+
+WHAT IS THE SERVER USING TO COMMUNICATE WITH THE COMPUTER OF THE USER REQUESTING THE WEBSITE?
+	The web server.
+
+EXPLAIN THE ISSUES THAT ARE WITH SINGLE POINT OF FAILURE (SPOF) INFRASTRUCTURE?
+	Backup and redundant systems and software components ensure against the loss of a primary system.
+	A second channel or conduit for redundant network cabling protects against loss of connections to local carriers and internet service providers.
+
+EXPLAIN THE ISSUES THAT ARE WITH Downtime when maintenance needed (like deploying new code web server needs to be restarted) INFRASTRUCTURE?
+	Down-time is any period when the computer on which a system is based is not operating. This may be because of a serious hardware or software problem
