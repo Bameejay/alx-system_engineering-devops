@@ -1,20 +1,20 @@
-#!/usr/bin/env bash
-# Configure Nginx
+# Puppet manifest to install nginx
+package { 'nginx':
+  ensure => installed,
+}
 
-apt updte
-apt install -y nginx
+file_line { 'aaaaa':
+  ensure => 'present',
+  path   => '/etc/nginx/sites-available/default',
+  after  => 'listen 80 default_server;',
+  line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
+}
 
-echo "Hello World" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    index index.html;
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-    }
-    error_page 404 /404.html;
-}" > /etc/nginx/sites-enabled/default
+file { '/var/www/html/index.html':
+  content => 'Hello World!',
+}
 
-service nginx restart
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx'],
+}
